@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="demo.stock.StockConfirmController">
+   <children>
+      <AnchorPane layoutY="158.0" prefHeight="140.0" prefWidth="601.0" style="-fx-background-color: #00b33c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="113.0" layoutY="14.0" prefHeight="61.0" prefWidth="376.0" text="Stock has been succesfully updated !" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="17.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="close" defaultButton="true" layoutX="272.0" layoutY="97.0" onAction="#close" style="-fx-background-color: WHITE; -fx-background-radius: 2;" text="CLOSE">
+               <font>
+                  <Font name="Roboto Regular" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="211.0" layoutY="55.0" prefHeight="38.0" prefWidth="179.0" text="UPDATED !" textFill="#00b33c">
+         <font>
+            <Font name="Roboto Light" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

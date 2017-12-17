@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.InvoicesController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="629.0" prefWidth="844.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="invoiceno" prefHeight="37.0" prefWidth="209.0" promptText="Invoice Number">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="364.0">
+               <children>
+                  <Label fx:id="distlbl" text="Distributor ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="datelbl" text="Date : ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <TableView fx:id="table" minWidth="615.0" prefHeight="355.0" prefWidth="785.0" stylesheets="@../Css/2.css">
+               <columns>
+                  <TableColumn fx:id="namecol" minWidth="200.0" prefWidth="156.0" text="NAME" />
+                  <TableColumn fx:id="idcol" prefWidth="75.0" text="HSN CODE" />
+                  <TableColumn fx:id="quancol" prefWidth="75.0" text="QUANTITY" />
+                  <TableColumn fx:id="pricecol" prefWidth="152.0" text="MRP" />
+                  <TableColumn fx:id="ratecol" prefWidth="152.0" text="RATE" />
+                  <TableColumn fx:id="gstcol" prefWidth="152.0" text="GST" />
+                  <TableColumn fx:id="totcol" prefWidth="152.0" text="TOTAL" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" top="20.0" />
+               </VBox.margin>
+            </TableView>
+            <Label fx:id="labool" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" onAction="#report" style="-fx-background-color: #00b33c; -fx-background-radius: 2;" text="Print Report" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <JFXButton fx:id="back" onAction="#goBack" text="BACK" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+   </children>
+</AnchorPane>

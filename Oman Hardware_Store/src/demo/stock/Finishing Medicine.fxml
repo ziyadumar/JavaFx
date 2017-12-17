@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="938.0" stylesheets="@../../Css/Dark%20Theme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.stock.FinishingMedicineController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="589.0" prefWidth="938.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="15.0" prefWidth="938.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="181.0" styleClass="billingLabel" text="Quantity less than : ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="quan" maxWidth="100.0" styleClass="billingText" />
+               </children>
+            </HBox>
+            <TableView fx:id="table" minWidth="480.0" prefHeight="411.0" prefWidth="480.0" styleClass="tabled" stylesheets="@../../Css/2.css">
+               <columns>
+                  <TableColumn fx:id="mfrcol" maxWidth="100.0" minWidth="100.0" prefWidth="75.0" text="MFR" />
+                  <TableColumn fx:id="namecol" prefWidth="156.0" text="NAME" />
+                  <TableColumn fx:id="quancol" maxWidth="100.0" minWidth="75.0" prefWidth="75.0" text="QUANTITY" />
+                  <TableColumn fx:id="pricecol" maxWidth="100.0" minWidth="75.0" prefWidth="152.0" text="OMR" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" top="20.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="-40.0" layoutY="-40.0" prefHeight="50.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Label alignment="CENTER" maxHeight="50.0" prefHeight="100.0" prefWidth="938.0" style="-fx-background-color: white;" text="FINISHING GOODS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Roboto Regular" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="back" onAction="#goBack" prefHeight="39.0" prefWidth="76.0" styleClass="backbuttons" text="BACK" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CHEVRON_LEFT" size="25" styleClass="glyphsb" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

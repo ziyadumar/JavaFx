@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="70696a41-a2d0-44a9-86f7-e7a86292e17f">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM oman.billhistory;;]]>
+	</queryString>
+	<field name="billno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="customer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="contact" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="doc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="total" class="java.lang.Float" calculation="Sum">
+		<variableExpression><![CDATA[$F{amount}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="138" splitType="Stretch">
+			<staticText>
+				<reportElement x="24" y="89" width="506" height="49" uuid="7337287c-7557-4c39-b62e-133a0ff06424"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Daily Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="22" width="223" height="24" uuid="05d5360a-9a69-4eee-bf74-9454d04a0997"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[HAIMA TECH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="46" width="163" height="24" uuid="d1fdab17-0c0a-4ad1-a8bf-ceab3a3f7a17"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[xxxxxxxxxx]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="8" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" uuid="76d01652-9f40-4a7b-a1d8-b73db39b868d"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bill Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="20" uuid="844a4427-ad3a-493c-a132-d7209ca0bb16"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="20" uuid="891b0bc2-f43d-4ebd-8de5-bb88f3fc50a5"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="25" width="532" height="1" uuid="05d8b1fb-1b15-4adf-9ef1-71135ebfa309"/>
+			</line>
+			<line>
+				<reportElement x="10" y="-6" width="532" height="1" uuid="8ca3c46e-6c27-4a60-a18b-c30262785b3d"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="20" uuid="c388c4e5-3cb6-44e6-8281-a04498345aea"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{billno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="20" uuid="b19bd20a-c717-4eda-b53d-4b67704152fb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="20" uuid="e9686c10-9fa6-4859-bf45-a52828415fb5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="69" splitType="Stretch">
+			<line>
+				<reportElement x="10" y="5" width="532" height="1" uuid="8272441d-c28d-4d72-9b4a-c8941c199a28"/>
+			</line>
+			<line>
+				<reportElement x="12" y="32" width="532" height="1" uuid="a04b0dfc-2dde-40f0-af7e-ca54361ab4c8"/>
+			</line>
+			<textField>
+				<reportElement x="370" y="9" width="185" height="20" uuid="dab9a427-533e-4f13-9ead-52ea89f6f734"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["OMR. "+$V{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="9" width="185" height="20" uuid="dfdd6b72-e466-471b-b250-28b3c9991dae"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total  Gross :]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="3" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="-21" width="124" height="20" uuid="1638f1f1-8465-4ec3-ab74-7ca51f1e81ff"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Report Generated On : ]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="141" y="-21" width="154" height="20" uuid="bd39804e-1484-4506-9280-3e17835660b0"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="-21" width="80" height="20" uuid="6de6e794-1a8f-4f3f-93b8-56c7aafd3d39"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="-21" width="40" height="20" uuid="7c3b80c7-8e98-4c44-be72-97bf40ef32b9"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="5" splitType="Stretch"/>
+	</summary>
+</jasperReport>

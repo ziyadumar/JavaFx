@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="432" pageHeight="54" columnWidth="432" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="30e32679-4340-4c39-b4d3-485fee91aac4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM oman.billhistory ORDER BY billno DESC LIMIT 1;]]>
+	</queryString>
+	<field name="billno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="customer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="contact" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="doc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="207" y="22" width="43" height="20" uuid="52012a9c-bed1-40d4-bda5-e1a3fae9e9b1"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DATE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="3" width="43" height="20" uuid="4592a9e9-4c73-47e4-a9bc-c1e775b522fb"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[BILL NO. :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="3" width="37" height="20" uuid="4f88f693-16c1-4440-a6de-4e549e7faad3"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[TO :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="250" y="3" width="100" height="20" uuid="0e86bcde-581e-467f-82cc-ca8f7dc43ec7"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{billno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="3" width="100" height="20" uuid="aeb764cf-3a28-4eef-ad11-d61d2016db09"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="250" y="22" width="176" height="20" uuid="a2b30355-fc13-4503-bea0-6018d72a658e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

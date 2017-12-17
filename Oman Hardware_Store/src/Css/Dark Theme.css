@@ -1,0 +1,193 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 30, 2017, 4:28:24 PM
+    Author     : ZIYAD
+*/
+
+*{
+    -fx-primary : #d9d9d9 ;   /* grey to white shade*/
+    -fx-sec: #ff5c33;   /* orange */
+    -fx-dark : #4d4d4d ; 
+    -fx-black : black ;
+    -fx-white : white ;
+}
+
+
+.root{
+    
+    -fx-background-color: -fx-dark ;   
+    
+}
+
+/*general window buttons
+*/
+
+.gbutt{
+    
+    -fx-font-size : 20px ;
+    -fx-border-color:  -fx-primary ;    
+    -fx-text-fill: -fx-primary ;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;     
+    
+}
+
+.gbutt:hover{
+    
+    -fx-font-size : 20px ;
+    -fx-background-color: -fx-white ;
+    -fx-border-color: -fx-sec ;    
+    -fx-text-fill: -fx-sec ;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;       
+    -fx-font-weight : bold ;
+    
+    
+}
+
+.billbutts{
+        
+    -fx-font-size : 25px ;
+    -fx-background-color: -fx-white ;   
+    -fx-border-color: -fx-white ;    
+    -fx-text-fill: -fx-black ;
+    -fx-background-radius: 1px;
+    -fx-border-radius: 1px ;      
+    -fx-border-width: 1px ;
+    -fx-font-size : 15px ;
+    -fx-font-weight : bold ;
+    
+}
+.billbutts:hover {
+        
+    -fx-background-color: white;   
+    -fx-border-color: -fx-sec ;     
+    -fx-text-fill: -fx-sec ;
+    -fx-background-radius: 1px;
+    -fx-border-radius: 1px ;     
+    -fx-border-width: 1px ;
+    -fx-font-weight : bold ; 
+    
+}
+
+
+.billbutts:hover .glyphs{
+        
+    -fx-background-color: white;   
+    -fx-border-color: -fx-primary ;    
+    -fx-text-fill: -fx-sec ;
+    -fx-background-radius: 1px;
+    -fx-border-radius: 1px ;     
+    -fx-border-width: 1px ;
+    -fx-font-weight : bold ;    
+    -fx-fill: -fx-sec ;
+    
+}
+
+
+
+
+.glyphs{
+    
+    -fx-fill: -fx-black ;
+    
+    
+}
+
+
+
+
+
+.billingText{
+
+    -fx-background-color: transparent;   
+    -fx-border-color: #d9d9d9;    
+    -fx-text-fill: -fx-primary ;
+    -fx-background-radius: 0px;
+    -fx-border-radius: 0px;             
+    
+}
+
+.billingText:focused{
+
+    -fx-background-color: transparent;   
+    -fx-border-color: -fx-sec;    
+    -fx-text-fill: -fx-primary ;
+    -fx-background-radius: 0px;
+    -fx-border-radius: 0px;            
+        
+}
+
+.billingLabel{    
+    -fx-text-fill: -fx-primary ; 
+    -fx-font-weight : bold ; 
+}
+
+.tabled:focused{
+  
+    -fx-border-color: -fx-sec ;  
+    -fx-border-width : 3px ;
+    
+}
+
+.backbuttons{
+	
+	-fx-background-color: transparent;   
+    -fx-border-color: transparent; 	
+	-fx-text-fill : black ; 
+}
+.glyphsb{
+    
+    -fx-fill: black ;
+    
+    
+}
+.backbuttons:hover  .glyphsb{
+		
+	-fx-background-color: transparent;   
+    -fx-border-color: transparent; 
+	-fx-text-fill : -fx-sec ; 
+	-fx-fill : -fx-sec ;
+}
+
+.spltpane{   
+          
+    -fx-background-color: -fx-dark ;  
+        
+}
+
+.tab-header-background {
+    -fx-background-color: transparent ;
+    -fx-border-color: white ;
+}
+
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: -fx-white ;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+
+.tab:selected .tab-label { 
+    -fx-background-color: white ;
+    -fx-alignment: CENTER;
+    -fx-text-fill: -fx-black ;
+}
+
+.jfx-tab-pane .tab-header-area .jfx-rippler{
+    -fx-rippler-fill: -fx-white ;
+	
+}
+
+
+
+
+.jfx-tab-pane .tab-selected-line {
+    -fx-stroke:  -fx-sec ;
+}
