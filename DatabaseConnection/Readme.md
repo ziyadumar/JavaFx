@@ -5,8 +5,8 @@ The basic code for connecting JavaFx applicaton using MySQL server hosted on loc
 For this you'll require:
 
 1.Installation of MySQL server and Workbench.
-    * Then you'll configure the server with a username and root-password.
-    * Never forget those credentials at all. 
+   *  Then you'll configure the server with a username and root-password.
+   *  Never forget those credentials at all. 
 2.Importing MySQL-connector.jar into your library folder of your project.
 
 Connector.java shows the connecting procedure, which includes:
