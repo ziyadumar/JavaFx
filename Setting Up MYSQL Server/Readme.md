@@ -16,4 +16,4 @@ https://dev.mysql.com/downloads/file/?id=473605
 You don't have to install all the packages.
 Follow the attachments for necessesary installtaions only.
 
-![alt text](C:\Users\ZIYAD\Pictures\Screenshots\ScreenShot00295.png)
+![alt text](https://github.com/ziyadumar/JavaFx/blob/master/Files/Server.png)
