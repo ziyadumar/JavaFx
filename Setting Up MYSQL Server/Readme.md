@@ -17,3 +17,18 @@ You don't have to install all the packages.
 Follow the attachments for necessesary installtaions only.
 
 ![alt text](https://github.com/ziyadumar/JavaFx/blob/master/Files/Server.png)
+
+Click the x64 version of Server and press the single right arrow to shift it to te right window.
+
+![alt text](https://github.com/ziyadumar/JavaFx/blob/master/Files/Application.png)
+
+Similarly, select the Workbench Under the 'Applicaions' and press the single right arrow to shift it to te right window.
+
+Now both files will be on the right hand side.
+
+Proceed with installation and provide password when asked.
+### Do not forget this password, since this is importand and used big-time later.
+
+Execute and finish the installtion.
+
+#### Congratulations, Setup is now complete for your Server and Workbench.
