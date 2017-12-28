@@ -26,7 +26,8 @@ Similarly, select the Workbench Under the 'Applicaions' and press the single rig
 
 Now both files will be on the right hand side.
 
-Proceed with installation and provide password when asked.
+Proceed with installation and provide your new password when prompted
+.
 ### Do not forget this password, since this is importand and used big-time later.
 
 Execute and finish the installtion.
