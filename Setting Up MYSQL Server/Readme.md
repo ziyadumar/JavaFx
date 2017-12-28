@@ -12,3 +12,8 @@ Both of the above entities come bundled in a single installer.
 The installer can be downloaded and installed from the following link.
 
 https://dev.mysql.com/downloads/file/?id=473605
+
+You don't have to install all the packages.
+Follow the attachments for necessesary installtaions only.
+
+![alt text](http://url/to/img.png)
