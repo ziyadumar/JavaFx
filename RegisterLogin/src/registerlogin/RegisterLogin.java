@@ -35,6 +35,7 @@ public class RegisterLogin extends Application {
             stage.sizeToScene();
             stage.setMaximized(true);
             gotoFirstPage();
+            primaryStage.show();
                 
         } catch (Exception ex) {
             Logger.getLogger(RegisterLogin.class.getName()).log(Level.SEVERE, null, ex);
@@ -61,9 +62,28 @@ public class RegisterLogin extends Application {
         return (Initializable) loader.getController();
     }
 
-    private void gotoFirstPage() {
+    public void gotoFirstPage() {
         try {
             RegisterNewAccountController login = (RegisterNewAccountController) replaceSceneContent("RegisterNewAccount.fxml");
+            login.setApp(this);
+            } catch (Exception ex) {
+                Logger.getLogger(RegisterLogin.class.getName()).log(Level.SEVERE, null, ex);
+            }
+    }
+    
+
+    public void gotoUserPage() {
+        try {
+            AccountPageController login = (AccountPageController) replaceSceneContent("AccountPage.fxml");
+            login.setApp(this);
+            } catch (Exception ex) {
+                Logger.getLogger(RegisterLogin.class.getName()).log(Level.SEVERE, null, ex);
+            }
+    }    
+    
+    public void gotoCreateNewPage() {
+        try {
+            CreateNewUserController login = (CreateNewUserController) replaceSceneContent("CreateNewUser.fxml");
             login.setApp(this);
             } catch (Exception ex) {
                 Logger.getLogger(RegisterLogin.class.getName()).log(Level.SEVERE, null, ex);
