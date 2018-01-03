@@ -23,6 +23,7 @@ public class Person {
         this.address = address ;
     }
 
+    // A default constructor, [like "Person person2 = new Person();" ] when no arguments are passed ,saves the following values to each variables.
     Person() {
         this.name = "Jasper" ;
         this.contact = "412 Grape Street" ;
