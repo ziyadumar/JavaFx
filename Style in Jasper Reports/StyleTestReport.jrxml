@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StyleTestReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8ef70a26-4353-4fcc-803b-e279da016d35">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<template><![CDATA["C:\\Users\\mindfire\\Desktop\\Style in Jasper Reports\\JasperCustomStyle.jrtx"]]></template>
+	<style name="AlternateBands">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT} % 2 == 0]]></conditionExpression>
+			<style mode="Opaque" forecolor="#000000" backcolor="#66FFCC" fill="Solid">
+				<pen lineWidth="0.5" lineStyle="Double" lineColor="#FF0000"/>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="Heading" mode="Opaque" forecolor="#FF0000" backcolor="#FFCCCC" hAlign="Center" vAlign="Middle" fontSize="12" isBold="true" isUnderline="true"/>
+	<style name="FindCountryCheck" style="AlternateBands">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{SHIPCOUNTRY}.equals($P{CHECK_COUNTRY})]]></conditionExpression>
+			<style mode="Opaque" backcolor="#FFFFFF" fill="Solid" hAlign="Center" vAlign="Middle" isItalic="true">
+				<box>
+					<pen lineWidth="1.0" lineColor="#FF0033"/>
+					<topPen lineWidth="1.0" lineStyle="Double" lineColor="#FF0033"/>
+					<leftPen lineWidth="1.0" lineStyle="Double" lineColor="#FF0033"/>
+					<bottomPen lineWidth="1.0" lineStyle="Double" lineColor="#FF0033"/>
+					<rightPen lineWidth="1.0" lineStyle="Double" lineColor="#FF0033"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<parameter name="CHECK_COUNTRY" class="java.lang.String">
+		<defaultValueExpression><![CDATA["USA"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT TOP 30 *
+FROM orders]]>
+	</queryString>
+	<field name="ORDERID" class="java.lang.Integer"/>
+	<field name="CUSTOMERID" class="java.lang.String"/>
+	<field name="EMPLOYEEID" class="java.lang.Integer"/>
+	<field name="ORDERDATE" class="java.sql.Timestamp"/>
+	<field name="REQUIREDDATE" class="java.sql.Timestamp"/>
+	<field name="SHIPPEDDATE" class="java.sql.Timestamp"/>
+	<field name="SHIPVIA" class="java.lang.Integer"/>
+	<field name="FREIGHT" class="java.math.BigDecimal"/>
+	<field name="SHIPNAME" class="java.lang.String"/>
+	<field name="SHIPADDRESS" class="java.lang.String"/>
+	<field name="SHIPCITY" class="java.lang.String"/>
+	<field name="SHIPREGION" class="java.lang.String"/>
+	<field name="SHIPPOSTALCODE" class="java.lang.String"/>
+	<field name="SHIPCOUNTRY" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="26" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement style="Heading" x="0" y="0" width="54" height="20" uuid="102334cb-defb-4767-9141-6c3cc7c1c04d"/>
+				<text><![CDATA[FREIGHT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="New style" x="54" y="0" width="126" height="20" uuid="e2daec0a-9399-4eee-ba03-f49afdf33fe5"/>
+				<text><![CDATA[SHIPNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Heading" x="180" y="0" width="120" height="20" uuid="4e920948-ff12-4fe0-a86d-c0b1b4a2c0ca"/>
+				<text><![CDATA[SHIPADDRESS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Heading" x="300" y="0" width="89" height="20" uuid="a05017a5-6cf0-4bdd-b6e8-1235488be233"/>
+				<text><![CDATA[SHIPCITY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Heading" x="389" y="0" width="80" height="20" uuid="55245e21-9ef7-4dde-b79b-4f32fabb4fc1"/>
+				<text><![CDATA[SHIPPOSTALCODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Heading" x="469" y="0" width="86" height="20" uuid="e58754fa-be41-4037-a7c7-ae64c6e8f747"/>
+				<text><![CDATA[SHIPCOUNTRY]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="AlternateBands" x="0" y="0" width="54" height="20" uuid="012e0f44-e260-444e-9aa3-f74ab600686e"/>
+				<textFieldExpression><![CDATA[$F{FREIGHT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="AlternateBands" x="54" y="0" width="126" height="20" uuid="7c9a1a35-4e8a-49a0-a65d-38e6a9bc6751"/>
+				<textFieldExpression><![CDATA[$F{SHIPNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="AlternateBands" x="180" y="0" width="120" height="20" uuid="f196d399-ac8b-4445-8071-f3bd17211cf6"/>
+				<textFieldExpression><![CDATA[$F{SHIPADDRESS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="AlternateBands" x="300" y="0" width="89" height="20" uuid="7422ffae-4902-4e5f-81ee-11f7c8fe6357"/>
+				<textFieldExpression><![CDATA[$F{SHIPCITY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="AlternateBands" x="389" y="0" width="80" height="20" uuid="023b31fa-1344-4e39-85d8-3be2e4b45d28"/>
+				<textFieldExpression><![CDATA[$F{SHIPPOSTALCODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="FindCountryCheck" x="469" y="0" width="86" height="20" uuid="1c5f971a-6739-471c-be7a-4cfabbac83bf"/>
+				<textFieldExpression><![CDATA[$F{SHIPCOUNTRY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

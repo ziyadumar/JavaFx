@@ -44,3 +44,6 @@ nbactions.xml
 # End of https://www.gitignore.io/api/java,netbeans,code-java
 /DatabaseConnection/nbproject/private/
 /Login Using Db/nbproject/private/
+/LoginFromDB/nbproject/private/
+/RegisterLogin/nbproject/private/
+/ListOfObjects/nbproject/private/
