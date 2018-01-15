@@ -19,6 +19,7 @@ public class ListOfObjects extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
+        //The path of the file has to be specified relative to the project(absolute is also fine)
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
