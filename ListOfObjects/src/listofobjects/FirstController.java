@@ -21,7 +21,7 @@ import javafx.scene.control.TextField;
  *
  * @author ZIYAD
  */
-public class FXMLDocumentController implements Initializable {
+public class FirstController implements Initializable {
     
     @FXML
     private Label label;
